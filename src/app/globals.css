@@ -1,3 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@100;200;300;400;500;600&display=swap');
+
+.space-grotesk-thin {
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+}
+
+.space-grotesk-hairline {
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+}
+
+.space-grotesk-light {
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+}
+
+.space-grotesk-normal {
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+}
+
+.space-grotesk-medium {
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+}
+
+.space-grotesk-semibold {
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+}
+
+.space-grotesk-bold {
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700; /* Adjusted to a common 'bold' weight */
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,28 +49,27 @@
 *,
 *::after,
 *::before {
-	margin: 0;
-	padding: 0;
-	box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+	font-family: "Space Grotesk";
 }
 
 body {
-	box-sizing: border-box;
-	height: 100vh;
+  box-sizing: border-box;
+  height: 100vh;
   width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-		-webkit-appearance: none;
-		margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 input[type="number"] {
-		-moz-appearance: textfield;
+  -moz-appearance: textfield;
 }
-

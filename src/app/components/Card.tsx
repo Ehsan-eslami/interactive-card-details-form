@@ -22,14 +22,25 @@ export default function Card(props) {
             </h2>
             <div className="flex justify-between px-3 py-4 text-white">
               <p>
-                {!props.cardName ? 'JANE APPLESEED' : props.cardName.toUpperCase()}</p>
-              <p>00/00</p>
+                {!props.cardName ? 'JANE APPLESEED' : props.cardName.toUpperCase()}
+              </p>
+              <p>
+                <span>  
+                  {props.cardMonth}/
+                </span>
+                <span>
+                  {props.cardYear}  
+                </span>  
+              </p>
             </div>
           </div>
         </div>
 
-        <div className="w-[280px] md:w-96 col-span-2 col-start-2 md:col-span-2 md:col-start-3 shadow-lg rounded-lg order-1 md:order-none">
-          <img src="/images/bg-card-back.png" alt="card back" />
+        <div className=" relative w-[280px] md:w-96 col-span-2 col-start-2 md:col-span-2 md:col-start-3 shadow-lg rounded-lg order-1 md:order-none">
+          <img className="z-30 w-fit h-fit" src="/images/bg-card-back.png" alt="card back" />
+          <p className="text-white absolute top-[43%] z-20  right-10">
+            {props.cardCvc}
+          </p>
         </div>
       </section>
 
@@ -45,17 +56,34 @@ export default function Card(props) {
               </div>
 
               <h2 className="text-white text-sm sm:text-lg md:text-2xl text-center tracking-widest">
-                0000 0000 0000 0000
+                {
+                  !props.cardVal
+                  ? "0000 0000 0000 0000"
+                  :
+                  props.cardVal
+                }
               </h2>
               <div className="flex justify-between px-3 py-4 text-sm sm:text-lg text-white">
-                <p>Name</p>
-                <p>00/00</p>
+                <p>
+                  {!props.cardName ? 'JANE APPLESEED' : props.cardName.toUpperCase()}
+                </p>
+                <p>
+                  <span>  
+                    {props.cardMonth}/
+                  </span>
+                  <span>
+                    {props.cardYear}  
+                  </span> 
+                </p>
               </div>
             </div>
           </div>
 
           <div className="w-[200px] sm:w-[280px] md:w-96 col-span-2 col-start-3 md:col-span-2 md:col-start-3 shadow-lg rounded-lg order-1 md:order-none">
-            <img src="/images/bg-card-back.png" alt="card back" />
+            <img className="z-30 w-fit h-fit" src="/images/bg-card-back.png" alt="card back" />
+            <p>
+              {props.cardCvc}
+            </p>
           </div>
         </div>
       </section>
