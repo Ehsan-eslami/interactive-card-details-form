@@ -79,9 +79,9 @@ export default function Card(props) {
             </div>
           </div>
 
-          <div className="w-[200px] sm:w-[280px] md:w-96 col-span-2 col-start-3 md:col-span-2 md:col-start-3 shadow-lg rounded-lg order-1 md:order-none">
+          <div className=" relative w-[200px] sm:w-[280px] md:w-96 col-span-2 col-start-3 md:col-span-2 md:col-start-3 shadow-lg rounded-lg order-1 md:order-none">
             <img className="z-30 w-fit h-fit" src="/images/bg-card-back.png" alt="card back" />
-            <p>
+            <p className="text-white absolute text-[10px] sm:text-base top-[43%] z-20  right-10">
               {props.cardCvc}
             </p>
           </div>
