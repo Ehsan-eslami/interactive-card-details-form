@@ -9,9 +9,9 @@ import ActiveCard from "./components/ActiveCard";
 export default function Home() {
   const [cardVal, setCardVal] = useState('');
   const [cardName, setCardName] = useState('');
-  const [cardMonth, setCardMonth] = useState('');
-  const [cardYear, setCardYear] = useState('');
-  const [cardCvc, setCardCvc] = useState('');
+  const [cardMonth, setCardMonth] = useState('00');
+  const [cardYear, setCardYear] = useState('00');
+  const [cardCvc, setCardCvc] = useState('000');
   const [showModal, setShowModal] = useState(false);
 
   const [errors, setErrors] = useState({
@@ -86,9 +86,9 @@ export default function Home() {
     setShowModal(false);
     setCardVal('');
     setCardName('');
-    setCardMonth('');
-    setCardYear('');
-    setCardCvc('');
+    setCardMonth('00');
+    setCardYear('00');
+    setCardCvc('000');
   };
 
   useEffect(() => {}, [cardVal, cardMonth, cardYear, cardCvc]);
