@@ -1,11 +1,13 @@
-import React from 'react'
+interface ActiveCardProps {
+  func: (event: React.MouseEvent<HTMLButtonElement>) => void;
+}
 
-export default function ActiveCard(props) {
+const ActiveCard: React.FC<ActiveCardProps> = ({ func }) => {
   return (
     <section className="z-10 w-full h-full order-2 flex justify-center">
       <div className="h-full w-[60%] flex flex-col justify-center items-center gap-5">
         <div>
-          <img src="/images/icon-complete.svg" alt="" />
+          <img src="/images/icon-complete.svg" alt="Complete icon" />
         </div>
         <h3 className='font-bold text-2xl'>
           THANK YOU!
@@ -14,13 +16,14 @@ export default function ActiveCard(props) {
           We've added your card details
         </h5>
         <button
-          onClick={props.func}
-          className=" p-2 bg-[#21092F] w-full text-white rounded-md hover:opacity-90 "
-          >
+          onClick={func}
+          className="p-2 bg-[#21092F] w-full text-white rounded-md hover:opacity-90"
+        >
           Continue
         </button>
-
       </div>
-    </section>   
-  )
+    </section>
+  );
 }
+
+export default ActiveCard;
