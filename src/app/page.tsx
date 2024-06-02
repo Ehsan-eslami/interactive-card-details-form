@@ -112,37 +112,37 @@ export default function Home() {
                 func={handleName}
                 placeholder="e.g. Jane Appleseed"
                 type="text"
+                errors={errors.cardName}
               />
-              {errors.cardName && <p className="text-red-500 text-xs">{errors.cardName}</p>}
               <Input 
                 name='CARD NUMBER'
                 func={handleChange}
                 placeholder="e.g. 1234 5678 9012 3456"
                 type="text" 
+                errors={errors.cardVal}
               />
-              {errors.cardVal && <p className="text-red-500 text-xs">{errors.cardVal}</p>}
               <div className="z-10 flex flex-row gap-2"> 
                 <Input 
                   name='Exp. Date (MM)'
                   func={handleMonth}
                   type="text" 
                   placeholder="MM"
+                  errors={errors.cardMonth}
                 />
-                {errors.cardMonth && <p className="text-red-500 text-xs">{errors.cardMonth}</p>}
                 <Input 
                   name='Exp. Date (YY)'
                   func={handleYear}
                   type="text" 
                   placeholder="YY"
+                  errors={errors.cardYear}
                 />
-                {errors.cardYear && <p className="text-red-500 text-xs">{errors.cardYear}</p>}
                 <Input 
                   name='CVC'
                   func={handleCvc}
                   type="text" 
                   placeholder="CVC"
+                  errors={errors.cardCvc}
                 />
-                {errors.cardCvc && <p className="text-red-500 text-xs">{errors.cardCvc}</p>}
               </div>
               <button
                 onClick={handleSubmit}
@@ -156,6 +156,11 @@ export default function Home() {
           <ActiveCard func={handleContinue} />
         )}
       </main>
+
+      <div className="attribution z-40 absolute bottom-0 left-[50%] translate-x-[-50%]">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="https://github.com/Ehsan-eslami">EhsanEslami</a>.
+      </div>
     </>
   );
 }

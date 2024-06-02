@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function ActiveCard(props) {
   return (
-    <section className="w-full h-full order-2 flex justify-center">
+    <section className="z-10 w-full h-full order-2 flex justify-center">
       <div className="h-full w-[60%] flex flex-col justify-center items-center gap-5">
         <div>
           <img src="/images/icon-complete.svg" alt="" />
